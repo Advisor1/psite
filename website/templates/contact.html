@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}	
+	<section class="banner-inside-pg">
+		<img src="{% static 'website/images/banner-contact.jpg' %}" alt="" title="">
+	</section><!-- ./banner-home end -->
+
+	<!-- alert message starts -->
+	{% if messages %}
+	{% for message in messages %}
+	<div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+	  <strong>Hi {{ username }}!</strong> {{ message }}
+	  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	</div>
+	{% endfor %}
+	{% endif %}
+	<!-- alert message ends -->
+
+	<section class="banner-bottom-conts inside-pg contact-pg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<h2 class="moveUp h2-f26 in-view">Contact</h2>
+				</div><!-- ./col -->
+			</div><!-- ./row -->
+
+
+			<div class="row contact-mn-block NewContact-colm" id="msg">
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 aling-c contact-form-blockL">
+                    <div class="leftSidbar">
+                    	  
+	  					<p class="moveUp in-view">Read more related to <a href="home.html"><i>Insurance</i>.</a>
+	  					</p>
+
+						<p class="moveUp font-light turquoise-col in-view">
+						Keep in touch on WhatsApp with below icon, also can send me an query.</p>
+
+						<!-- Whats app chat section starts -->
+                        <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+						<div class="elfsight-app-3ce999db-532b-4e9e-a77a-833c520fc276"></div>
+               			 <!-- whats app chat section ends -->
+					</div>	
+				</div><!-- ./col -->
+				
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 contact-form-block">
+					<form action="{% url 'contact' %}" method="post" id="main_form">
+						{% csrf_token %}
+						<img src="images/loading.gif" style="display:none;" id="loaderimage">
+					     						 
+						<div class="form-group">
+						  <label for="email">Name <cite>*</cite></label>
+						  <input type="text" class="form-control" id="username" placeholder="" name="username" required>
+						  <span id="namerror" class="red-alert" style="display:none; color:red;">Please enter your name.</span>
+						</div>
+						<div class="form-group">
+						  <label for="email">Email <cite>*</cite></label>
+						  <input type="email" class="form-control" id="useremail" placeholder="" name="useremail" onblur="emailcheck()" required>
+						  <span id="emailerror" class="red-alert" style="display:none; color:red;">Please enter email address</span>
+						  <span id="error" class="red-alert" style="display:none; color:red;">Please enter valid email address.
+						  <span id="remainpart"></span></span>
+						</div>
+						<div class="form-group">
+						  <label for="email">Phone Number </label>
+						  <input type="text" class="form-control" id="" placeholder="" name="usercontact" required>
+						  <span id="lengthvalidation" class="red-alert" style="display:none; color:red;">Please enter a valid phone number</span>
+						</div>
+						<div class="form-group">
+						  <label for="pwd">Message <cite>*</cite></label>
+						  <textarea class="form-control areaFld" id="usermessage" placeholder="" name="usermessage"></textarea>
+						  <span id="messagerror" class="red-alert" style="display:none; color:red;">Please enter a message.</span>
+						</div>
+						<input type="hidden" name="recaptcha_response" id="recaptchaResponse" value="03AGdBq27fImFoa5IpCDTzBez9gQ9S1aWNrwO51VFZWbBusLzVaLN5h9jRZ2pUxsSh99Cdnl7dTW54RXf5kyWi1QtHFfWYY4d5NnUoQzLBBv8xMS0CVGTbULwkLIOUT3vNxIIoMTdSeTbUZQKSwBMVNaPBmmfiucTjMzfAt0cyCSiF4j2O-Yu6gyDYgHYZ4-CGx9q6RgjL6eDN8tCGIQhKTwJPEOJHTK4g3KcjfCA26vMviyQ8S-9CbEVlO4PsWA3RVuAjBIuNET1Qvg1S0SwMqzXXwmQiGpFQaz5NaUY1LEiGSI9qLHOlm3bVTq1n6s0-A1KFexoHRERTYzUwUdjxUsQiaw3BpZ8BXqJ-nLms-qKInAqja4T1qEj7k9P89d_QiMILcbDpVsB3daZRaAehXVVUQ229yoTpP5eoI-8WuIyg-JC90vDsrUvxLnMwOXkyOJg2MzFfkvlk">
+						<p class="moveUp" style="margin: 20px 0 0 0; font-size: 14px;"><cite style="display:inline-block; color:#000; font-style: normal; margin-right: 3px;">*</cite>Required field</p>
+						<button type="buttton" name="btnsubmit" id="btnsubmit" class="btn-contForm btn btn-primary">Send</button>
+					</form>
+				</div><!-- ./col -->
+			</div><!-- ./row -->
+			
+		</div><!-- ./container -->
+	</section>
+			
+	
+	{% endblock %}
+	

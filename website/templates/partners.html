@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}	
+
+	<section class="banner-inside-pg">
+		<img src="{% static 'website/images/partner.jpg' %}" alt="" title="">
+	</section><!-- ./banner-home end -->
+	
+	<section class="banner-bottom-conts inside-pg clients-pg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<h2 class="moveUp h2-f26 in-view">Service Partners</h2>
+				</div><!-- ./col -->
+			</div><!-- ./row -->
+			
+			<div class="row clients-block-space tpNone">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<!-- <p class="moveUp turquoise-col bold padL10 in-view">Global Financial</p> -->
+					<ul class="client-lits">
+						<li><img src="{% static 'website/images/clients-logo01.jpg' %}" alt="IK rajoria, LIC Advisor" title="Life insurance"></li>
+						<li><img src="{% static 'website/images/clients-logo02.jpg' %}" alt="IK rajoria, NIC Advisor" title="General Insuralce, National insurance company"></li>
+						<li><img src="{% static 'website/images/clients-logo03.png' %}" alt="IK rajoria, Mutual funds partner" title="HDFC mutual funds"></li>
+						<li><img src="{% static 'website/images/clients-logo04.png' %}" alt="IK rajoria, Mutual funds partner" title="ICICI"></li>
+						<li><img src="{% static 'website/images/clients-logo05.png' %}" alt="IK rajoria, Mutual funds partner" title="SBI Mutual Funds"></li>
+						<li><img src="{% static 'website/images/clients-logo06.png' %}" alt="IK rajoria, Mutual funds partner" title="Axis"></li>
+						<li><img src="{% static 'website/images/clients-logo07.png' %}" alt="IK rajoria, Mutual funds partner" title="Edelweiss"></li>
+						<li><img src="{% static 'website/images/clients-logo08.png' %}" alt="IK rajoria, Mutual funds partner" title="Birla sunlife mutual funds"></li>
+					</ul>
+				</div><!-- ./col -->	
+			</div><!-- ./row -->
+			
+		</div><!-- ./container -->
+	</section><!-- ./banner-bottom-conts end -->
+	
+	{% endblock %}

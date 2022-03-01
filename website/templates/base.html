@@ -1,0 +1,117 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+   <title>IK Rajoria — Best Insurance Advisor | LIC | NICL |Mutual Funds</title>
+   <meta name="description" content="IK Rajoria is one of the top rated Insurance Advisor for LIC, NICL, General Insurance and Mutual Funds advisor in Jaipur, Rajasthan, India. offering consultation online to clients."
+    />
+
+    <meta name="keywords" content="Insurance Advisor Jaipur, Life Insurance Advisor Jaipur , General insurance Advisor in Jaipur, Motor insurance, Car insurance, Business insurance, Mutual Funds, SIP, LIC agent, NICL agent Jaipur, Business insurance, Bike-scooter Insurance, two wheeler insurance, four wheeler insurance, commercial vehicle insurance"
+    />
+   <link rel="stylesheet" href="{% static 'website/css/bootstrap.min.css' %}">
+   <meta name="description" content="Indra Kumar helps individuals and organizations flourish through offering different saving strategies." />
+   <link rel="canonical" href="home.html" />
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&amp;display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="{% static 'website/css/owl.carousel.css' %}">
+   <link rel="stylesheet" href="{% static 'website/css/animate.css' %}">
+   <link rel="stylesheet" href="{% static 'website/css/fadeAnimation.css' %}">
+   <link rel="stylesheet" href="{% static 'website/css/style.css' %}">
+   
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-156099387-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	 
+	  gtag('config', 'UA-156099387-1');
+
+	</script>
+	<meta name="google-site-verification" content="" />
+</head>
+
+<!-- prevent resubmission of form -->
+<!-- <script src="{% static 'website/js/htmx.min.js' %}"></script> -->
+<script>
+if ( window.history.replaceState ) {
+  window.history.replaceState( null, null, window.location.href );
+}
+</script>
+<!-- prevent resubmission ends -->
+
+<body>
+
+<div class="home_wrap">
+	<header>          
+		<div class="left-sidbr">
+			<div class="logo">
+			  <a href="home.html"><img src="{% static 'website/images/logo.png' %}" alt="" title="" ></a>
+			</div>
+			
+			<a href="javascript:void(0)" class="mobile-trigger"><span></span></a>
+			
+			<div class="menu-bar Fullmenu-bar">
+			   <ul>
+				 <li><a href="consultation.html">Consultation</a></li>
+				 <li class="sub-Menu-hov"><a href="javascript:void(0)" class="mob-dd">Insurance</a>
+					<div class="sub-Menu">
+						<ul>
+							<li><a href="life.html">Life Insurance</a></li>
+							<li><a href="general_insurance.html">General Insurance</a></li>
+						</ul>
+					</div>
+				 </li>
+				 <li><a href="sip.html">Mutual Funds & SIP</a></li>
+				 <li><a href="partners.html">Partners</a></li>
+				 <li><a href="about.html">About</a></li>
+				 <li class="Cont-btn"><a href="contact.html">Contact</a></li>
+			   </ul>
+			</div>
+			
+		</div>  
+	</header><!-- ./header end -->
+
+	{% block content %}
+	{% endblock %}
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="footer-btm">
+						<ul class="moveUp">
+							<li><a href="consultation.html">Consultation</a></li>
+							<li><a href="life.html"> Life Insurance</a></li>
+							<li><a href="general_insurance.html">General Insurance</a></li>
+							<li><a href="sip.html">Mutual Funds & SIPs</a></li>
+							<li><a href="partners.html">Partners</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+						<p class="moveUp copy-text">© 2002-2022 <a href="#">IK Rajoria Consulting </a>All rights reserved.</p>
+						<p class="moveUp copy-text-b">Designed & Developed by <a href="#" target="_blank">Vikas Rajoria</a></p>
+					</div>
+				</div><!-- ./col -->
+			</div><!-- ./row -->
+		</div><!-- ./container -->
+	</footer>
+	<!-- footer end -->
+
+      
+   <!-- jQuery files -->
+   <script src="{% static 'website/js/jquery/3.4.1/jquery.min.html' %}"></script>
+   <script src="{% static 'website/js/code.jquery.com/jquery-1.11.3.min.js' %}"></script>
+   <script src="{% static 'website/js/code.jquery.com/jquery.min.js' %}"></script>
+   <script src="{% static 'website/js/code.jquery.com/bootstrap.min.js' %}"></script>
+   <script src="{% static 'website/js/smooth-owl.carousel.js' %}"></script>
+   <script src="{% static 'website/js/waypoints.min.js' %}"></script>
+   <script src="{% static 'website/js/animations.js' %}"></script>
+   <script src="{% static 'website/js/custom_script.js' %}"></script>
+   <script src="{% static 'website/js/bootstrap.bundle.min.js' %}" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+ 
+</body>
+</html>
