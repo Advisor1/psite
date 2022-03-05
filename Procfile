@@ -1,1 +1,1 @@
-web: gunicorn pweb.wsgi --log-file -
+web: gunicorn pweb.wsgi
